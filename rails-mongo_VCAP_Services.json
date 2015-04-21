@@ -1,0 +1,2 @@
+# for local testing
+{"mongodb-2.4" : [ {"name" : "mongodb-rails-mongo", "label" : "mongodb-2.4", "plan" : "100", "credentials" : { "hostname" : "localhost", "host" : "127.0.0.1", "port" : 27017, "username" : "", "password" : "", "name" : "", "db" : "myapp_development", "url" : "mongodb://127.0.0.1:27017/myapp_development"}} ]}

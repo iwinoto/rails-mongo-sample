@@ -1,0 +1,914 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-09 23:51:53 +0930
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/iwinoto/.rvm/gems/ruby-2.1.0-preview1/gems/railties-4.0.0.beta1/lib/rails/templates/rails/welcome/index.html.erb (1.1ms)
+Completed 200 OK in 13ms (Views: 12.7ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-04-09 23:51:54 +0930
+
+
+Started GET "/products" for 127.0.0.1 at 2014-04-09 23:52:51 +0930
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5980ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4754ms)
+  Rendered products/index.html.slim within layouts/application (13.0ms)
+Completed 200 OK in 644ms (Views: 625.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-09 23:52:52 +0930
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-09 23:52:52 +0930
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-09 23:52:52 +0930
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-09 23:52:52 +0930
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-09 23:52:52 +0930
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-09 23:52:52 +0930
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-09 23:52:52 +0930
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-09 23:52:52 +0930
+
+
+Started GET "/products/new" for 127.0.0.1 at 2014-04-09 23:53:10 +0930
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.slim (15.4ms)
+  Rendered products/new.html.slim within layouts/application (20.0ms)
+Completed 200 OK in 24ms (Views: 23.2ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2014-04-09 23:53:25 +0930
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDuDyTik6ywb88zehSmsFamu8vSG/MZfW7tpH0znOF8=", "product"=>{"name"=>"Flowers", "description"=>"red", "price"=>"10.50"}, "commit"=>"Save"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3661ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=myapp_development collection=products documents=[{"_id"=>"534557dd999211e421000001", "name"=>"Flowers", "description"=>"red", "price"=>10.5, "updated_at"=>2014-04-09 14:23:25 UTC, "created_at"=>2014-04-09 14:23:25 UTC}] flags=[] (0.1416ms)
+Redirected to http://localhost:3000/products/534557dd999211e421000001
+Completed 302 Found in 9ms
+
+
+Started GET "/products/534557dd999211e421000001" for 127.0.0.1 at 2014-04-09 23:53:25 +0930
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"534557dd999211e421000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={"_id"=>"534557dd999211e421000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1698.5648ms)
+  Rendered products/show.html.slim within layouts/application (3.4ms)
+Completed 200 OK in 1707ms (Views: 6.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-09 23:53:27 +0930
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-09 23:53:27 +0930
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-09 23:53:27 +0930
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-09 23:53:27 +0930
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-09 23:53:27 +0930
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-09 23:53:27 +0930
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-09 23:53:27 +0930
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-09 23:53:27 +0930
+
+
+Started GET "/products/" for 127.0.0.1 at 2014-04-09 23:53:40 +0930
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4034ms)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__2822920917806804999_28266480 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+  Rendered products/index.html.slim within layouts/application (1.6ms)
+Completed 200 OK in 5ms (Views: 4.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-09 23:53:40 +0930
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-09 23:53:40 +0930
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-09 23:53:40 +0930
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-09 23:53:40 +0930
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-09 23:53:40 +0930
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-09 23:53:40 +0930
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-09 23:53:40 +0930
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-09 23:53:40 +0930
+
+
+Started GET "/products/" for 127.0.0.1 at 2014-04-10 00:25:53 +0930
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.slim within layouts/application (17.1ms)
+Completed 500 Internal Server Error in 40ms
+
+ActionView::Template::Error (
+Problem:
+  No configuration could be found for a session named 'default'.
+Summary:
+  When attempting to create the new session, Mongoid could not find a session configuration for the name: 'default'. This is necessary in order to know the host, port, and options needed to connect.
+Resolution:
+  Double check your mongoid.yml to make sure under the sessions key that a configuration exists for 'default'. If you have set the configuration programatically, ensure that 'default' exists in the configuration hash.):
+     9:     th
+    10:     th
+    11: 
+    12:   - @products.each do |product|
+    13:     tr
+    14:       td = product.name
+    15:       td = product.description
+  app/views/products/index.html.slim:12:in `_app_views_products_index_html_slim___1083592338528879023_25582640'
+
+
+  Rendered /home/iwinoto/.rvm/gems/ruby-2.1.0-preview1/gems/actionpack-4.0.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/iwinoto/.rvm/gems/ruby-2.1.0-preview1/gems/actionpack-4.0.0.beta1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (16.0ms)
+  Rendered /home/iwinoto/.rvm/gems/ruby-2.1.0-preview1/gems/actionpack-4.0.0.beta1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-10 00:26:10 +0930
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/iwinoto/.rvm/gems/ruby-2.1.0-preview1/gems/railties-4.0.0.beta1/lib/rails/templates/rails/welcome/index.html.erb (0.5ms)
+Completed 200 OK in 3ms (Views: 2.2ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-04-10 00:26:10 +0930
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2014-04-10 00:26:12 +0930
+Processing by Rails::InfoController#properties as HTML
+  Rendered /home/iwinoto/.rvm/gems/ruby-2.1.0-preview1/gems/railties-4.0.0.beta1/lib/rails/templates/rails/info/properties.html.erb (0.7ms)
+Completed 200 OK in 14ms (Views: 9.9ms)
+
+
+Started GET "/products/" for 127.0.0.1 at 2014-04-10 00:26:17 +0930
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.slim within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (
+Problem:
+  No configuration could be found for a session named 'default'.
+Summary:
+  When attempting to create the new session, Mongoid could not find a session configuration for the name: 'default'. This is necessary in order to know the host, port, and options needed to connect.
+Resolution:
+  Double check your mongoid.yml to make sure under the sessions key that a configuration exists for 'default'. If you have set the configuration programatically, ensure that 'default' exists in the configuration hash.):
+     9:     th
+    10:     th
+    11: 
+    12:   - @products.each do |product|
+    13:     tr
+    14:       td = product.name
+    15:       td = product.description
+  app/views/products/index.html.slim:12:in `_app_views_products_index_html_slim___1083592338528879023_25582640'
+
+
+  Rendered /home/iwinoto/.rvm/gems/ruby-2.1.0-preview1/gems/actionpack-4.0.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/iwinoto/.rvm/gems/ruby-2.1.0-preview1/gems/actionpack-4.0.0.beta1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/iwinoto/.rvm/gems/ruby-2.1.0-preview1/gems/actionpack-4.0.0.beta1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/products/" for 127.0.0.1 at 2014-04-10 00:39:47 +0930
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6452ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2251ms)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__2704593155893015512_29651600 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+  Rendered products/index.html.slim within layouts/application (14.1ms)
+Completed 200 OK in 80ms (Views: 61.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-10 00:39:47 +0930
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-10 00:39:47 +0930
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-10 00:39:47 +0930
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-10 00:39:47 +0930
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-10 00:39:47 +0930
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-10 00:39:47 +0930
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-10 00:39:47 +0930
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-10 00:39:47 +0930
+
+
+Started GET "/products/" for 127.0.0.1 at 2014-04-10 09:11:48 +0930
+Processing by ProductsController#index as HTML
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+ MOPED: Could not resolve IP address for ${test_host}:${test_port}
+  Rendered products/index.html.slim within layouts/application (8100.9ms)
+Completed 500 Internal Server Error in 8156ms
+
+ActionView::Template::Error (Could not connect to any secondary or primary nodes for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address=nil>]>):
+     9:     th
+    10:     th
+    11: 
+    12:   - @products.each do |product|
+    13:     tr
+    14:       td = product.name
+    15:       td = product.description
+  app/views/products/index.html.slim:12:in `_app_views_products_index_html_slim___1219871896600266353_30437580'
+
+
+  Rendered /home/iwinoto/.rvm/gems/ruby-2.1.0-preview1/gems/actionpack-4.0.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (14.7ms)
+  Rendered /home/iwinoto/.rvm/gems/ruby-2.1.0-preview1/gems/actionpack-4.0.0.beta1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (16.2ms)
+  Rendered /home/iwinoto/.rvm/gems/ruby-2.1.0-preview1/gems/actionpack-4.0.0.beta1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (49.7ms)
+
+
+Started GET "/products/" for 127.0.0.1 at 2014-04-14 12:15:35 +1000
+Processing by ProductsController#index as HTML
+  MOPED: 75.126.37.68:10119 COMMAND      database=admin command={:ismaster=>1} (10002.1067ms)
+  MOPED: 75.126.37.68:10119 COMMAND      database=admin command={:ismaster=>1} (10001.8296ms)
+  MOPED: 75.126.37.68:10119 COMMAND      database=admin command={:ismaster=>1} (10001.6723ms)
+  MOPED: 75.126.37.68:10119 COMMAND      database=admin command={:ismaster=>1} (10001.8387ms)
+  MOPED: 75.126.37.68:10119 COMMAND      database=admin command={:ismaster=>1} (10001.9157ms)
+  MOPED: 75.126.37.68:10119 COMMAND      database=admin command={:ismaster=>1} (10003.5427ms)
+  MOPED: 75.126.37.68:10119 COMMAND      database=admin command={:ismaster=>1} (10001.9138ms)
+  MOPED: 75.126.37.68:10119 COMMAND      database=admin command={:ismaster=>1} (9963.3925ms)
+  Rendered products/index.html.slim within layouts/application (81771.3ms)
+Completed   in 81829ms
+
+
+Started GET "/products/" for 127.0.0.1 at 2014-04-14 12:19:32 +1000
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (19.8426ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (101.9008ms)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__1127039823985571667_27596460 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+  Rendered products/index.html.slim within layouts/application (134.9ms)
+Completed 200 OK in 278ms (Views: 258.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 12:19:32 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 12:19:33 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 12:19:33 +1000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 12:19:33 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-14 12:19:33 +1000
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-14 12:19:33 +1000
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-14 12:19:33 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 12:19:33 +1000
+
+
+Started GET "/products/534557dd999211e421000001" for 127.0.0.1 at 2014-04-14 12:19:40 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"534557dd999211e421000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5839ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={"_id"=>"534557dd999211e421000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (53.9665ms)
+  Rendered products/show.html.slim within layouts/application (3.8ms)
+Completed 200 OK in 63ms (Views: 7.2ms)
+
+
+Started GET "/products/534557dd999211e421000001/edit" for 127.0.0.1 at 2014-04-14 12:19:44 +1000
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"534557dd999211e421000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={"_id"=>"534557dd999211e421000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3109ms)
+  Rendered products/_form.html.slim (495.8ms)
+  Rendered products/edit.html.slim within layouts/application (541.4ms)
+Completed 200 OK in 545ms (Views: 544.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-04-14 12:19:47 +1000
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4013ms)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__1127039823985571667_30030320 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+  Rendered products/index.html.slim within layouts/application (5.0ms)
+Completed 200 OK in 8ms (Views: 8.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-04-14 12:33:02 +1000
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6359ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2542ms)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__2261908309800420097_14747000 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+  Rendered products/index.html.slim within layouts/application (24.4ms)
+Completed 200 OK in 81ms (Views: 63.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 12:33:02 +1000
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-14 12:33:02 +1000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 12:33:02 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:02 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:02 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:02 +1000
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:02 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:02 +1000
+
+
+Started GET "/products/534557dd999211e421000001" for 127.0.0.1 at 2014-04-14 12:33:06 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"534557dd999211e421000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5794ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={"_id"=>"534557dd999211e421000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2728ms)
+  Rendered products/show.html.slim within layouts/application (3.4ms)
+Completed 200 OK in 9ms (Views: 6.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-04-14 12:33:08 +1000
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5226ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2499ms)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__2261908309800420097_23185040 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+  Rendered products/index.html.slim within layouts/application (5.4ms)
+Completed 200 OK in 9ms (Views: 8.6ms)
+
+
+Started GET "/products/534557dd999211e421000001/edit" for 127.0.0.1 at 2014-04-14 12:33:11 +1000
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"534557dd999211e421000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4559ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={"_id"=>"534557dd999211e421000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2375ms)
+  Rendered products/_form.html.slim (15.4ms)
+  Rendered products/edit.html.slim within layouts/application (27.1ms)
+Completed 200 OK in 32ms (Views: 29.9ms)
+
+
+Started PATCH "/products/534557dd999211e421000001" for 127.0.0.1 at 2014-04-14 12:33:17 +1000
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDuDyTik6ywb88zehSmsFamu8vSG/MZfW7tpH0znOF8=", "product"=>{"name"=>"Flowers", "description"=>"purple", "price"=>"10.5"}, "commit"=>"Save", "id"=>"534557dd999211e421000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5105ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={"_id"=>"534557dd999211e421000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2379ms)
+Redirected to http://localhost:3000/products/534557dd999211e421000001
+Completed 302 Found in 4ms
+
+
+Started GET "/products/534557dd999211e421000001" for 127.0.0.1 at 2014-04-14 12:33:17 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"534557dd999211e421000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={"_id"=>"534557dd999211e421000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3119ms)
+  Rendered products/show.html.slim within layouts/application (3.1ms)
+Completed 200 OK in 7ms (Views: 6.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 12:33:17 +1000
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-14 12:33:17 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:17 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:17 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:17 +1000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 12:33:17 +1000
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:17 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:17 +1000
+
+
+Started GET "/products/534557dd999211e421000001/edit" for 127.0.0.1 at 2014-04-14 12:33:25 +1000
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"534557dd999211e421000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={"_id"=>"534557dd999211e421000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2959ms)
+  Rendered products/_form.html.slim (2.3ms)
+  Rendered products/edit.html.slim within layouts/application (10.2ms)
+Completed 200 OK in 15ms (Views: 13.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-04-14 12:33:27 +1000
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3171ms)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__2261908309800420097_23185040 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+  Rendered products/index.html.slim within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 4.4ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2014-04-14 12:33:29 +1000
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.slim (2.0ms)
+  Rendered products/new.html.slim within layouts/application (4.4ms)
+Completed 200 OK in 8ms (Views: 7.3ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2014-04-14 12:33:40 +1000
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDuDyTik6ywb88zehSmsFamu8vSG/MZfW7tpH0znOF8=", "product"=>{"name"=>"Cars", "description"=>"Silver", "price"=>"100"}, "commit"=>"Save"}
+  MOPED: 127.0.0.1:27017 INSERT       database=myapp_development collection=products documents=[{"_id"=>"534b49049992112f10000001", "name"=>"Cars", "description"=>"Silver", "price"=>100.0, "updated_at"=>2014-04-14 02:33:40 UTC, "created_at"=>2014-04-14 02:33:40 UTC}] flags=[] (0.1795ms)
+Redirected to http://localhost:3000/products/534b49049992112f10000001
+Completed 302 Found in 48ms
+
+
+Started GET "/products/534b49049992112f10000001" for 127.0.0.1 at 2014-04-14 12:33:41 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"534b49049992112f10000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={"_id"=>"534b49049992112f10000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3533ms)
+  Rendered products/show.html.slim within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 3.4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 12:33:41 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:41 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:41 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:41 +1000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 12:33:41 +1000
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-14 12:33:41 +1000
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:41 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:41 +1000
+
+
+Started GET "/products" for 127.0.0.1 at 2014-04-14 12:33:44 +1000
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4425ms)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__2261908309800420097_23185040 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__2261908309800420097_23185040 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+  Rendered products/index.html.slim within layouts/application (2.9ms)
+Completed 200 OK in 6ms (Views: 6.1ms)
+
+
+Started GET "/products/534557dd999211e421000001/edit" for 127.0.0.1 at 2014-04-14 12:33:48 +1000
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"534557dd999211e421000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={"_id"=>"534557dd999211e421000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4041ms)
+  Rendered products/_form.html.slim (10.7ms)
+  Rendered products/edit.html.slim within layouts/application (11.7ms)
+Completed 200 OK in 17ms (Views: 15.2ms)
+
+
+Started PATCH "/products/534557dd999211e421000001" for 127.0.0.1 at 2014-04-14 12:33:53 +1000
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDuDyTik6ywb88zehSmsFamu8vSG/MZfW7tpH0znOF8=", "product"=>{"name"=>"Flowers", "description"=>"purple", "price"=>"10.5"}, "commit"=>"Save", "id"=>"534557dd999211e421000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={"_id"=>"534557dd999211e421000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2959ms)
+Redirected to http://localhost:3000/products/534557dd999211e421000001
+Completed 302 Found in 2ms
+
+
+Started GET "/products/534557dd999211e421000001" for 127.0.0.1 at 2014-04-14 12:33:53 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"534557dd999211e421000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={"_id"=>"534557dd999211e421000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2866ms)
+  Rendered products/show.html.slim within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 3.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 12:33:54 +1000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 12:33:54 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:54 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:54 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:54 +1000
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-14 12:33:54 +1000
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:54 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 12:33:54 +1000
+
+
+Started GET "/products" for 127.0.0.1 at 2014-04-14 12:33:55 +1000
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3252ms)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__2261908309800420097_23185040 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__2261908309800420097_23185040 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+  Rendered products/index.html.slim within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 4.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-04-14 12:39:07 +1000
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (9.0497ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2534ms)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__3977606828650115675_28248140 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__3977606828650115675_28248140 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+  Rendered products/index.html.slim within layouts/application (22.8ms)
+Completed 200 OK in 87ms (Views: 68.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 12:39:07 +1000
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-14 12:39:07 +1000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 12:39:07 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 12:39:07 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 12:39:07 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-14 12:39:07 +1000
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-14 12:39:07 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 12:39:07 +1000
+
+
+Started GET "/products/534b49049992112f10000001" for 127.0.0.1 at 2014-04-14 12:39:10 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"534b49049992112f10000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7439ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={"_id"=>"534b49049992112f10000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3064ms)
+  Rendered products/show.html.slim within layouts/application (3.8ms)
+Completed 200 OK in 10ms (Views: 7.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-04-14 12:39:12 +1000
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3335ms)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__3977606828650115675_12006260 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__3977606828650115675_12006260 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+  Rendered products/index.html.slim within layouts/application (12.1ms)
+Completed 200 OK in 15ms (Views: 15.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2014-04-14 12:39:14 +1000
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.slim (14.4ms)
+  Rendered products/new.html.slim within layouts/application (18.2ms)
+Completed 200 OK in 21ms (Views: 21.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2014-04-14 12:39:29 +1000
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDuDyTik6ywb88zehSmsFamu8vSG/MZfW7tpH0znOF8=", "product"=>{"name"=>"Motorbike", "description"=>"Fat", "price"=>"5000"}, "commit"=>"Save"}
+  MOPED: 127.0.0.1:27017 INSERT       database=myapp_development collection=products documents=[{"_id"=>"534b4a619992113d3a000001", "name"=>"Motorbike", "description"=>"Fat", "price"=>5000.0, "updated_at"=>2014-04-14 02:39:29 UTC, "created_at"=>2014-04-14 02:39:29 UTC}] flags=[] (0.1931ms)
+Redirected to http://localhost:3000/products/534b4a619992113d3a000001
+Completed 302 Found in 3ms
+
+
+Started GET "/products/534b4a619992113d3a000001" for 127.0.0.1 at 2014-04-14 12:39:30 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"534b4a619992113d3a000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={"_id"=>"534b4a619992113d3a000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3169ms)
+  Rendered products/show.html.slim within layouts/application (3.0ms)
+Completed 200 OK in 7ms (Views: 5.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 12:39:30 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 12:39:30 +1000
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-14 12:39:30 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 12:39:30 +1000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 12:39:30 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-14 12:39:30 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 12:39:30 +1000
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-14 12:39:30 +1000
+
+
+Started GET "/products" for 127.0.0.1 at 2014-04-14 12:39:31 +1000
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3541ms)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__3977606828650115675_12006260 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__3977606828650115675_12006260 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__3977606828650115675_12006260 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+  Rendered products/index.html.slim within layouts/application (2.6ms)
+Completed 200 OK in 6ms (Views: 5.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-04-14 12:40:37 +1000
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6647ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2968ms)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__4181997038076979837_23152500 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__4181997038076979837_23152500 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__4181997038076979837_23152500 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+  Rendered products/index.html.slim within layouts/application (14.4ms)
+Completed 200 OK in 76ms (Views: 58.4ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-14 12:40:37 +1000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 12:40:37 +1000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 12:40:37 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 12:40:37 +1000
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-14 12:40:37 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 12:40:37 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-14 12:40:38 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 12:40:38 +1000
+
+
+Started GET "/products/534b49049992112f10000001/edit" for 127.0.0.1 at 2014-04-14 12:40:42 +1000
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"534b49049992112f10000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5381ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={"_id"=>"534b49049992112f10000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2260ms)
+  Rendered products/_form.html.slim (22.4ms)
+  Rendered products/edit.html.slim within layouts/application (27.1ms)
+Completed 200 OK in 32ms (Views: 30.0ms)
+
+
+Started PATCH "/products/534b49049992112f10000001" for 127.0.0.1 at 2014-04-14 12:40:55 +1000
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDuDyTik6ywb88zehSmsFamu8vSG/MZfW7tpH0znOF8=", "product"=>{"name"=>"Cars", "description"=>"Silver", "price"=>"10000"}, "commit"=>"Save", "id"=>"534b49049992112f10000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={"_id"=>"534b49049992112f10000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3457ms)
+Redirected to http://localhost:3000/products/534b49049992112f10000001
+Completed 302 Found in 3ms
+
+
+Started GET "/products/534b49049992112f10000001" for 127.0.0.1 at 2014-04-14 12:40:55 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"534b49049992112f10000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={"_id"=>"534b49049992112f10000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3488ms)
+  Rendered products/show.html.slim within layouts/application (3.0ms)
+Completed 200 OK in 7ms (Views: 5.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 12:40:55 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 12:40:55 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-14 12:40:55 +1000
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-14 12:40:55 +1000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 12:40:55 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 12:40:55 +1000
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-14 12:40:55 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 12:40:55 +1000
+
+
+Started GET "/products" for 127.0.0.1 at 2014-04-14 12:41:02 +1000
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3870ms)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__4181997038076979837_15187840 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__4181997038076979837_15187840 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__4181997038076979837_15187840 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+  Rendered products/index.html.slim within layouts/application (13.3ms)
+Completed 200 OK in 16ms (Views: 16.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2014-04-14 12:41:04 +1000
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.slim (2.4ms)
+  Rendered products/new.html.slim within layouts/application (4.7ms)
+Completed 200 OK in 8ms (Views: 8.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2014-04-14 12:41:11 +1000
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDuDyTik6ywb88zehSmsFamu8vSG/MZfW7tpH0znOF8=", "product"=>{"name"=>"House", "description"=>"Big", "price"=>"250000"}, "commit"=>"Save"}
+  MOPED: 127.0.0.1:27017 INSERT       database=myapp_development collection=products documents=[{"_id"=>"534b4ac79992117bfe000001", "name"=>"House", "description"=>"Big", "price"=>250000.0, "updated_at"=>2014-04-14 02:41:11 UTC, "created_at"=>2014-04-14 02:41:11 UTC}] flags=[] (0.1538ms)
+Redirected to http://localhost:3000/products/534b4ac79992117bfe000001
+Completed 302 Found in 2ms
+
+
+Started GET "/products/534b4ac79992117bfe000001" for 127.0.0.1 at 2014-04-14 12:41:11 +1000
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"534b4ac79992117bfe000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={"_id"=>"534b4ac79992117bfe000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3128ms)
+  Rendered products/show.html.slim within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 12:41:11 +1000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 12:41:11 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 12:41:11 +1000
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-14 12:41:11 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-14 12:41:11 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 12:41:11 +1000
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-14 12:41:11 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 12:41:11 +1000
+
+
+Started GET "/products" for 127.0.0.1 at 2014-04-14 12:41:13 +1000
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4101ms)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__4181997038076979837_15187840 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__4181997038076979837_15187840 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__4181997038076979837_15187840 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__4181997038076979837_15187840 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+  Rendered products/index.html.slim within layouts/application (2.9ms)
+Completed 200 OK in 6ms (Views: 5.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2014-04-14 12:41:27 +1000
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5746ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2830ms)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__2103118555907600277_36081780 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__2103118555907600277_36081780 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__2103118555907600277_36081780 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim__2103118555907600277_36081780 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+  Rendered products/index.html.slim within layouts/application (19.2ms)
+Completed 200 OK in 83ms (Views: 64.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 12:41:27 +1000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 12:41:27 +1000
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-14 12:41:27 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 12:41:27 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 12:41:27 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-14 12:41:27 +1000
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-14 12:41:27 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 12:41:27 +1000
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-14 20:37:16 +1000
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/iwinoto/.rvm/gems/ruby-2.1.0-preview1/gems/railties-4.0.0.beta1/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 22ms (Views: 21.3ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-04-14 20:37:16 +1000
+
+
+Started GET "/products/" for 127.0.0.1 at 2014-04-14 20:37:24 +1000
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6766ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=products selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3269ms)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim___3669056229192274506_22886040 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim___3669056229192274506_22886040 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim___3669056229192274506_22886040 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_products_index_html_slim___3669056229192274506_22886040 at /home/iwinoto/git/rails_with_mongo_example/app/views/products/index.html.slim:19)
+  Rendered products/index.html.slim within layouts/application (23.4ms)
+Completed 200 OK in 93ms (Views: 67.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-14 20:37:24 +1000
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-04-14 20:37:24 +1000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-14 20:37:24 +1000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-14 20:37:24 +1000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-14 20:37:24 +1000
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-04-14 20:37:24 +1000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-14 20:37:24 +1000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-14 20:37:24 +1000
