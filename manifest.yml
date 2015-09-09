@@ -1,4 +1,9 @@
 ---
+declared-services:
+  mysql-database:
+    label: mongodb
+    plan: '100'
+
 env:
   RAILS_ENV: development
   RACK_ENV: development
