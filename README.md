@@ -1,19 +1,25 @@
 [![Deploy to IBM Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://hub.jazz.net/git/iwinoto/rails-mongo-sample/)
 
-This README.md file is displayed on your project page. You should edit this 
-file to describe your project, including instructions for building and 
-running the project, pointers to the license under which you are making the 
-project available, and anything else you think would be useful for others to
-know.
+[Origin blog post](http://moredevideas.com/getting-started-rails-4-with-mongodb/)
 
-We have created an empty license.txt file for you. Well, actually, it says,
-"<Replace this text with the license you've chosen for your project.>" We 
-recommend you edit this and include text for license terms under which you're
-making your code available. A good resource for open source licenses is the 
-[Open Source Initiative](http://opensource.org/).
+[Original Source](https://github.com/ezilocchi/rails_with_mongo_example.git)
 
-Be sure to update your project's profile with a short description and 
-eye-catching graphic.
+This is an introductional tutorial with the intention of showing how to create a Rails 4 app with MongoDB, using Rspec and Cucumber for testing
 
-Finally, consider defining some sprints and work items in Track & Plan to give 
-interested developers a sense of your cadence and upcoming enhancements.
+The project has been modified for Bluemix deployment.
+To deploy to Bluemix execute from the app root:
+
+Update the host name in manifest.yml
+
+ 1. create the service as named in the manifest.yml
+
+    $ cf create-service mongodb 100 mongo-rails-sample
+
+ 2. push the application using the default manifest file (manifest.yml)
+
+    $ cf push
+
+After a successful push the application will be available at:
+
+   http://<your host name>.mybluemix.net/products
+

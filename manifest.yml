@@ -1,6 +1,6 @@
 ---
 declared-services:
-  mysql-database:
+  mongo-rails-sample:
     label: mongodb
     plan: '100'
 
