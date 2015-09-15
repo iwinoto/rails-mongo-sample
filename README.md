@@ -1,6 +1,6 @@
 [![Deploy to IBM Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://hub.jazz.net/git/iwinoto/rails-mongo-sample/)
 
-[Origin blog post](http://moredevideas.com/getting-started-rails-4-with-mongodb/)
+[Original blog post](http://moredevideas.com/getting-started-rails-4-with-mongodb/)
 
 [Original Source](https://github.com/ezilocchi/rails_with_mongo_example.git)
 
@@ -21,5 +21,5 @@ Update the host name in manifest.yml
 
 After a successful push the application will be available at:
 
-   http://<your host name>.mybluemix.net/products
+   http://_your host name_.mybluemix.net/products
 
