@@ -1,5 +1,10 @@
 <%
   begin
+    puts "VCAP_SERVICES = "
+    puts ENV['VCAP_SERVICES']
+    puts "JSON: "
+    puts "#{JSON.parse(ENV['VCAP_SERVICES'])}"
+    
     mongo_creds = JSON.parse(ENV['VCAP_SERVICES'])["mongodb-2.4"].first["credentials"]
     puts "'VCAP_SERVICES' set. Getting Mongo connection values"
   rescue
