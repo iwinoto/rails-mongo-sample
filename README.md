@@ -4,7 +4,11 @@
 
 [Original Source](https://github.com/ezilocchi/rails_with_mongo_example.git)
 
-This is an introductional tutorial with the intention of showing how to create a Rails 4 app with MongoDB, using Rspec and Cucumber for testing
+This is an introduction tutorial with the intention of showing how to create a Rails 4 app with MongoDB, using Rspec and Cucumber for testing
+
+To run locally, use foreman which will read the process start commands from Procfile and set the environment from .env
+
+        # foreman start web
 
 The project has been modified for Bluemix deployment.
 To deploy to Bluemix execute from the app root:
