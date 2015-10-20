@@ -8,8 +8,8 @@
       "hostname" => "locahost",
       "host" => "127.0.0.1",
       "port" => 27017,
-      "username" => "",
-      "password" => "",
+      "username" => "iwinoto",
+      "password" => "iwinoto",
       "name" => "",
       "db" => "db",
       "url" => "mongodb://127.0.0.1:27017/db"
@@ -30,8 +30,16 @@ development:
       # of host:port pairs. (required)
       hosts:
         - <%= mongo_creds["host"] %>:<%= mongo_creds["port"] %>
+
+      # Only set username and password if we have one, otherwise the db connection will fail
+      <%
+        if (mongo_creds["username"] && mongo_creds["username"].length > 0)
+      %>
       username: <%= mongo_creds["username"] %>
       password: <%= mongo_creds["password"] %>
+      <%
+        end
+      %>
       options:
         # Change whether the session persists in safe mode by default.
         # (default: false)
@@ -94,8 +102,15 @@ test:
       database: <%= mongo_creds["db"] %>
       hosts:
         - <%= mongo_creds["host"] %>:<%= mongo_creds["port"] %>
+
+      # Only set username and password if we have one, otherwise the db connection will fail
+      <%
+        if (mongo_creds["username"] && mongo_creds["username"].length > 0)
+      %>
       username: <%= mongo_creds["username"] %>
       password: <%= mongo_creds["password"] %>
+      <% end %>
+
       options:
         # consistency is not a valid option in latest mongoid
         #consistency: :strong
@@ -113,5 +128,11 @@ production:
       # of host:port pairs. (required)
       hosts:
         - <%= mongo_creds["host"] %>:<%= mongo_creds["port"] %>
+
+      # Only set username and password if we have one, otherwise the db connection will fail
+      <%
+        if (mongo_creds["username"] && mongo_creds["username"].length > 0)
+      %>
       username: <%= mongo_creds["username"] %>
       password: <%= mongo_creds["password"] %>
+      <% end %>

@@ -7,8 +7,8 @@ require "expect"
 
 environment = ENV["ENV"] || "public-dev"
 manifest = ENV["MANIFEST"] || "manifest.yml"
-user = ENV["USER"]
-password = ENV["PASSWORD"]
+user = ENV["CF_USER"]
+password = ENV["CF_PASSWD"]
 # Make sure cf doesn't color the output so we can do clean regex of cf responses
 # without having to look for unicode
 ENV["CF_COLOR"] = "false"

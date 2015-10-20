@@ -12,8 +12,8 @@ applications:
 - name: rails-mongo-sample
   memory: 128M
   instances: 1
+  host: iw-products-dev
   domain: mybluemix.net
   path: .
-  command: bundle exec rails s -p $PORT -b $VCAP_APP_HOST
   services:
   - mongo-rails-sample
