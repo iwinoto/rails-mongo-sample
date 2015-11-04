@@ -7,6 +7,7 @@ gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
 
 # Recommended by CF
 gem 'rails_12factor'
+gem 'cf-app-utils'
 
 # Gems used only for assets and not required
 # in production environments by default.

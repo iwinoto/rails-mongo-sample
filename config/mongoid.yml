@@ -1,21 +1,25 @@
 <%
+  require 'cf-app-utils'
   begin
-    mongo_creds = JSON.parse(ENV['VCAP_SERVICES'])["mongodb-2.4"].first["credentials"]
+    mongo_creds = CF::App::Credentials.find_by_service_name('mongo-rails-sample')
+    db_host = ENV['DATABASE_URL']
     puts "'VCAP_SERVICES' set. Getting Mongo connection values"
   rescue
     puts "'VCAP_SERVICES' not set. Getting default Mongo connection values"
     mongo_creds = Hash[
-      "hostname" => "locahost",
-      "host" => "127.0.0.1",
-      "port" => 27017,
+      "hostname" => "c425.candidate.54.mongolayer.com",
+      "host" => "c425.candidate.54.mongolayer.com",
+      "uri" => "c425.candidate.54.mongolayer.com",
+      "port" => 10425,
       "username" => "iwinoto",
       "password" => "iwinoto",
       "name" => "",
       "db" => "db",
-      "url" => "mongodb://127.0.0.1:27017/db"
+      "url" => "mongodb://c425.candidate.54.mongolayer.com:10425"
     ]
   end
   puts "mongo_creds = #{mongo_creds}"
+  puts "db host = #{db_host}"
 %>
 
 development:
@@ -25,7 +29,7 @@ development:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: <%= mongo_creds["db"] %>
+      database: <%= mongo_creds["db"] || "db" %>
       # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
@@ -57,6 +61,7 @@ development:
         # The time in seconds that Moped should wait before retrying an
         # operation on failure. (default: 1)
         # retry_interval: 1
+      
   # Configure Mongoid specific options. (optional)
   options:
     # Configuration for whether or not to allow access to fields that do

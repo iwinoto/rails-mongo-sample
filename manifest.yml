@@ -5,15 +5,14 @@ declared-services:
     plan: '100'
 
 env:
-  RAILS_ENV: development
-  RACK_ENV: development
+  RAILS_ENV: production
+  RACK_ENV: production
 
 applications:
 - name: rails-mongo-sample
   memory: 128M
   instances: 1
-  host: iw-products-dev
-  domain: mybluemix.net
+  host: iw-products-demo
   path: .
   services:
   - mongo-rails-sample

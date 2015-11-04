@@ -8,15 +8,19 @@
 # $ rake deploy
 
 env:
-  public-dev:
-    api: api.ng.bluemix.net
+  au-syd-dev:
+    api: api.au-syd.bluemix.net
     space: dev
     organisation: iwinoto@au1.ibm.com
-  public-test:
-    api: api.ng.bluemix.net
+  au-syd-demo:
+    api: api.au-syd.bluemix.net
+    space: demo
+    organisation: iwinoto@au1.ibm.com
+  au-syd-test:
+    api: api.au-syd.bluemix.net
     space: test
     organisation: iwinoto@au1.ibm.com
-  public-prod:
-    api: api.ng.bluemix.net
+  au-syd-prod:
+    api: api.au-syd.bluemix.net
     space: prod
     organisation: iwinoto@au1.ibm.com
