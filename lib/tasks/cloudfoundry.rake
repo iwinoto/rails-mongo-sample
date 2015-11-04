@@ -73,10 +73,6 @@ task :create_services => [:login] do
   end
 end
 
-desc "Create user provided service"
-task :create_up_service => [:login] do
-end
-
 desc "Use cf to deploy to a cloudfoundry instance.
   Uses environment variables ENV and MANIFEST."
 task :deploy => [:unit_test, :login] do

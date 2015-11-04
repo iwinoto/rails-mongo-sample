@@ -10,18 +10,18 @@ To run locally, use foreman which will read the process start commands from Proc
 
         # foreman start web
 
-The project has been modified for Bluemix deployment.
+The project has been modified for Bluemix deployment. `lib/tasks/cloudfoundry.rake` contains rake tasks to create services and deploy to BLuemix.
+
 To deploy to Bluemix execute from the app root:
 
-Update the host name in manifest.yml
-
+ 1. Update the host name in manifest.yml
  1. create the service as named in the manifest.yml
-
-    $ cf create-service mongodb 100 mongo-rails-sample
+ 
+    $ rake create_services
 
  2. push the application using the default manifest file (manifest.yml)
 
-    $ cf push
+    $ rake deploy
 
 After a successful push the application will be available at:
 

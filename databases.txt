@@ -1,0 +1,11 @@
+# to use compose: mongodb://iwinoto:iwinoto@c425.candidate.54.mongolayer.com:10425
+VCAP_SERVICES={"user-provided": [ { "name": "mongo-rails-sample", "label": "user-provided", "credentials": { "hostname": "c425.candidate.54.mongolayer.com", "user": "iwinoto", "password": "iwinoto", "host": "c425.candidate.54.mongolayer.com", "port": 10425, "db": "db", "uri": "c425.candidate.54.mongolayer.com" } } ]}
+
+    mongo_creds = JSON.parse(ENV['VCAP_SERVICES'])["user-provided"].first["credentials"]
+
+
+  require 'cf-app-utils'
+    mongo_creds = CF::App::Credentials.find_by_service_name('mongo-rails-sample')
+    
+# to use local: mongodb://127.0.0.1:27017/db
+VCAP_SERVICES={"mongodb-2.4": [ { "name": "rails-mongo-sample", "label": "mongodb-2.4", "plan": "100", "credentials": { "hostname": "127.0.0.1", "host": "127.0.0.1", "port": 27017, "db": "db", "url": "mongodb://127.0.0.1:27017/db" } } ]}
