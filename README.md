@@ -17,13 +17,13 @@ To deploy to Bluemix execute from the app root:
  1. Update the host name in manifest.yml
  1. create the service as named in the manifest.yml
  
-    $ rake create_services
+        $ rake create_services
 
  2. push the application using the default manifest file (manifest.yml)
 
-    $ rake deploy
+        $ rake deploy
 
 After a successful push the application will be available at:
 
-   http://_your host name_.mybluemix.net/products
+     http://_your host name_.mybluemix.net/products
 
