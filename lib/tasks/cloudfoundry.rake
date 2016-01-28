@@ -13,7 +13,7 @@ environment = ENV["ENV"] || "au-syd-dev"
 env = Environments.new
 env.env = environment
 
-api = ENV["CF_API"] || #{env.api}
+api = ENV["CF_TARGET_URL"] || #{env.api}
 space = ENV["CF_SPACE"] || #{env.space}
 org = ENV["CF_ORG"] || #{env.org}
 
